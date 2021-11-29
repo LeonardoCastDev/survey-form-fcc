@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey form</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@300&family=Varela&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="wrapper">
+    <h1 id="title">Let Us Know Your Thoughts!</h1>
+    <form id="survey-form" action="myDataBase.php" method="get">
+      <p id="description">Answer this survey to receive a 10% coupon in your next purchase</p>
+      <div class="formField">
+        <label id="name-label" for="name">Full name</label>
+        <div>
+          <input id="name" type="text" placeholder="John Doe" required>
+        </div>
+      </div>
+      <div class="formField">
+        <label id="email-label" for="email">Email</label>
+        <div>
+          <input id="email" type="email" placeholder="JohnDoe55@gmail.com" required>
+        </div>
+      </div>
+      <div class="formField">
+        <label id="number-label" for="number">How many of our products have you bought?</label>
+        <div>
+          <input id="number" type="number" min="0" max="100" placeholder='"3"' required>
+        </div>
+      </div>
+      <div class="formField" id="checkboxPrUsed">
+        <p>Select the products that you have used?</p>
+        <div class="marginInput">
+          <p>
+            <input id="product1" type="checkbox" name="usedProducts" value="Product one" required>
+            <label for="product1">Product one</label>
+          </p>
+          <p>
+            <input id="product2" type="checkbox" name="usedProducts" value="Product two" >
+            <label for="product2">Product two</label>
+          </p>
+          <p>
+            <input id="product3" type="checkbox" name="usedProducts" value="Product three" >
+            <label for="product3">Product three</label>
+          </p>
+          <p>
+            <input id="product4" type="checkbox" name="usedProducts" value="Product four" >
+            <label for="product4">Product four</label>
+          </p>
+        </div>
+      </div>
+      <div class="formField" id="qSatisfaction">
+        <p>
+          Considering your complete experience with our company, how likely would you be to recommend our product to a friend or colleague?
+        </p>
+        <div class="marginInput">
+          <div>
+            <input id="vLikely" name="qSatisfaction" value="Very likely" type="radio" required>
+            <label for="vLikely">Very likely</label>
+          </div>
+          <div>
+            <input id="likely" name="qSatisfaction" value="Likely" type="radio">
+            <label for="likely">Likely</label>
+          </div>
+          <div>
+            <input id="neutral" name="qSatisfaction" value="Neutral" type="radio">
+            <label for="neutral">Neutral</label>
+          </div>
+          <div>
+            <input id="notlikely" name="qSatisfaction" value="Not likely" type="radio">
+            <label for="notlikely">Not likely</label>
+          </div>
+          <div>
+            <input id="vUnlikely" name="qSatisfaction" value="Very unlikely" type="radio">
+            <label for="vUnlikely">Very unlikely</label>
+          </div> 
+        </div>
+      </div>
+      <div class="formField">
+        <p>How long have you used our product?</p>
+        <select name="qHow long" id="dropdown" required>
+          <option value="" selected disabled hidden>Select a field</option>
+          <option value="Less than one month">Less than one month</option>
+          <option value="1 to 6 months">1 to 6 months</option>
+          <option value="6 months to 1 year">6 months to 1 year</option>
+          <option value="1 to 2 years">1 to 2 years</option>
+          <option value="2 years or more">2 years or more</option>
+          <option value="Never used">Never used</option>
+        </select>
+      </div>
+      <div class="formField">
+        <p>
+          Would you like to mention anything specific in your experience with our product which was not asked in the survey?
+        </p>
+        <div>
+          <textarea name="opinionHere" id="" cols="30" rows="10" maxlength="3000"></textarea>
+        </div>
+      </div>
+      <button id="submit">Submit</button>
+    </form>
+  </div>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
